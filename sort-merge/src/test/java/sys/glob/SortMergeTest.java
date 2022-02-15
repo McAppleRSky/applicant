@@ -5,19 +5,21 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-class TemplateTest {
+class SortMergeTest {
 
-    Template template;
+    SortMerge template;
 
     @BeforeEach
     void prepare() {
-        template = new Template();
+        template = new SortMergeImpl();
     }
 
     @Test
     void sortMainTest() {
-        int[] a = {5, 2, 4, 6, 1, 3, 2, 6};
-        template.sort(a, 1, a.length);
+        int[] actual = {5, 2, 4, 6, 1, 3, 2, 6};
+        int[] expected = {1, 2, 2, 3, 4, 5, 6, 6};
+        template.sort(actual, 1, actual.length);
+        assertArrayEquals(expected, actual);
     }
 
     @Test
@@ -28,9 +30,4 @@ class TemplateTest {
         assertArrayEquals(expected, actual);
     }
 
-
-
-//    @Test
-//    void merge() {
-//    }
 }

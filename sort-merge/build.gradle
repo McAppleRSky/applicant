@@ -34,7 +34,7 @@ ext {
     lombok_version = '1.18.22'
     lang3_version = "3.12.0"
     mockito_version = "4.3.1"
-//    log4j_version = "2.17.1"
+    log4j_version = "2.17.1"
 //    jetty9_version = "9.4.44.v20210927"
 //    servlet3_version = "3.1.0"
 //    jackson_version = "2.13.1"
@@ -52,6 +52,8 @@ dependencies {
     compileOnly         "org.projectlombok:lombok:$lombok_version"
     annotationProcessor "org.projectlombok:lombok:$lombok_version"
     implementation "org.apache.commons:commons-lang3:$lang3_version"
+    implementation "org.apache.logging.log4j:log4j-core:$log4j_version"
+    implementation "org.apache.logging.log4j:log4j-api:$log4j_version"
     // implementation 'javax.persistence:javax.persistence-api'
     // implementation 'javax.validation:validation-api'
 //    implementation 'javax.xml.bind:jaxb-api'
